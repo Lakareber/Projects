@@ -13,11 +13,9 @@ h3,
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+body {/* container for all the visual content on our page */
     color: white;
     position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     gap: 42px;
     padding: 48px 14px;
@@ -37,8 +35,7 @@ body {
 .backgroundImg img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    /* remove any white space in background */
+    object-fit: cover; /* remove any white space in background */
 }
 
 header {
@@ -46,9 +43,58 @@ header {
     gap: 14px;
 }
 
+body,
 header,
 main,
 .backgroundImg {
     display: flex;
     flex-direction: column;
+}
+
+header img {
+    max-width: 140px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 100%; /* make it a perfect circle */
+    padding-bottom: 8px; /* push it apart a little bit */
+}
+
+header mark { /* the header name box */
+    border-radius: 4px;
+    padding: 2px 4px;
+    background: white;
+    color: #0f172a;
+}
+
+header h1 { /* header text (small title) */
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+header p { /* header text bold  */
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+main {/* separate links */
+    gap: 14px;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    width: 420px;
+    max-width: 100%;
+    margin: 0 auto; /* self-centers horizontally */
+    transition-duration: 200ms;
+    cursor: pointer; /* when hovered over you will get a click cursor */
+}
+
+.link:hover {
+    border-color: skyblue;
 }
