@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- to start a standard html type ! and it will give you the skeleton-->
+<!-- how to comment: cmd+/ and it will highlight but user can't see -->
+<!-- to change the shortcut go Code + Settings + Keyboard Shortcuts or cmd+K+cmd+S and search Toggle Line Comment -->
+<!-- wrap text (stop it from going off screen): opt + Z to toggle between 2 options -->
+<html lang="en"> 
+    <!-- update the language and make sure it's in "en" for english -->
+
+<!-- 3 main sections of a html file Header, Body and Footer.
+Head: File Title
+Body: What you can see on the site. 
+    incl: header and footer, nav ([navigation] for links), section (to divide areas) div ([divisions] to separate within section), p (paragraph), a (anchor tag to external weblinks)
+Foot: -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Intro to Webdev</title>
+    <!-- change title^ -->
+    <link rel="stylesheet" href="styles.css"/>
+    <!-- link (self closing tag): connects to the #styles.css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- select multiple areas to type: opt+left click -->
+            <!-- href hyperlink reference + "" and # to make it a hyperlink underline, it won't be active until you  
+            Link is Live: remove the "#" + paste link + >YourText</a>-->
+            <!-- a class is added to any element as an attribute -->
+            <!-- To just have text no hyperlinked stuff: 
+                <a class="greylink">
+                    <p>About</p>                          -->
+        </nav>
+        <section>
+            <a class="whiteLink" href="https://mail.google.com/mail/u/0/">Gmail</a>
+            <a class="whiteLink" href="https://www.google.co.jp/imghp?hl=en&ogbl">Images</a>
+            <a class="whiteLink" href="#add_a_link">
+                <i class="fa-solid fa-braille"></i>
+            <div>
+                <a href="https://media.tenor.com/BpAm4F5YaWcAAAAi/dinosaur-jelly.gif">
+                    <img src="Public/dinosaur.webp" alt="dinosaur profile pic"/>
+                </a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <div>
+            <h1 class="headerText"
+            id="headerLogo"> Google</h1>
+            <!-- h1 tags are for the main information on the website, usually only have 1 -->
+            <!-- class: used to differentiate between if you have multiple h1s in document -->
+            <!-- id: can only be used on ONE tag in the entire document, MUST BE UNIQUE -->
+        </div>
+        <div class="searchBar">
+           <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+           </div>
+            <input/>
+            <!-- input is a self closing tag (there will only be 1 <> not 2 and you enter a "/" after to close it) -->
+            <div class="iconButtonContainer">
+                <button class="iconButton">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <button class="iconButton">
+                    <i class="fa-solid fa-camera"></i>
+                </button>
+            </div>
+        </div>
+        <div class="searchButtonsContainer">
+            <button>
+                <p>Google Search</p>
+            </button>
+            <button>
+                <p>I'm Feeling Lucky</p>
+            </button>
+        </div>
+        <div class="languageSelection">
+            <p>Google offered in: <span>日本語</span></p>
+            <!-- span tag: only space container that can be used within a paragraph, applies special styles which only apply to the specific paragraph -->
+        </div>
+    </main>
+    <footer>
+        <section>
+            <p>Japan</p>
+        </section>
+        <section>
+            <div class="footerLink">
+                <a href="https://about.google/">About</a>
+                <a href="https://ads.google.com/home/">Advertising</a>
+                <a href="https://www.google.com/business/">Business</a>
+                <a href="https://www.google.com/search/howsearchworks/how-search-works/">How Search works</a>
+            </div>
+            <div class="footerLink">
+                <a href="https://policies.google.com/privacy?hl=en-US">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=en-US">Terms</a>
+                <a>Settings</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

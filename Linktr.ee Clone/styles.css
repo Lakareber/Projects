@@ -1,0 +1,54 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+        /* type in font name or copy name from html file inside '' and give a backup of another font like sans-serif */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2, 
+h3, 
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 42px;
+    padding: 48px 14px;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+.backgroundImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;  /* vw: view width */
+    height: 100vh;
+    z-index: -2; /* layers the content in an out of the page on the z-axis */
+}
+
+.backgroundImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* remove any white space in background */
+}
+
+header {
+    text-align: center;
+    gap: 14px;
+}
+
+header,
+main,
+.backgroundImg {
+    display: flex;
+    flex-direction: column;
+}

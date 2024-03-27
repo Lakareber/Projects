@@ -1,0 +1,201 @@
+* { /* "*": only be used once and is used to select every html element on the page */
+    /* w3schools: for all syles information "#w3schools.com/cssref/css3_pr_align-items.php" */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #202124; /* DO NOT forget ";" or the next colour won't connect */
+    color: #bdc1c6;
+    /* margin: the border of the space */
+    /* padding: 14px; */
+    /* padding: space between margin and content (traditional margin) */
+    min-height: 100vh;
+    /* vh: view height (percentages), how much space it takes up on screen */
+    display: flex;
+    /* organises on the horizontal */
+    flex-direction: column;
+    gap: 14px;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    /* font-family: will set this styling to every child element on the page, unless the element has its own specific styling */
+
+}
+
+header {
+    display: flex;
+    /* flex: default is how things are stacked in a row  */
+    align-items: center;
+    /* Vertically: How flex display items in the row sit in respect to the boundaries of the container */
+    justify-content: space-between;
+    /* Horizontally: How flex display items are in respect to the boundary, centered on page */
+    /* space-between: pushes items to opposite sides
+    space-around: centers sections
+    space-evenly: makes them even on screen */
+    padding: 11px;
+}
+
+header section img {
+    max-width: 34px;
+    border-radius: 50%; 
+    border: 2px solid #8ab4f8; 
+}
+
+nav,
+section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* adds logical spacing (padding) around each object/content */
+
+}
+
+.whiteLink {
+    /* "." is needed to connect to the class=colour link */
+    /* anchor tag "a" cannot be used, can't discriminate between sections and colours everything  */
+    color: white;
+}
+.greyLink {
+    color: lightgrey;
+}
+
+a {
+    text-decoration: unset;
+    /* link underline is known as a "decoration" */
+    font-size: 0.8em;
+}
+
+a:hover {
+    text-decoration: underline;
+    /* applied to all anchor tags used ":" and will underline when hovered over */
+}
+
+main {
+    /* main: refering to the main section (a child) of the body paragraph */
+    flex: 1;
+    /* only set on main so it will take up as much space a possible */
+    /* typically the lower the number the better, if header & footer valued flex: 2 then main value flex:1 is double the size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+    padding: 0 14px;
+}
+
+.headerText {
+    padding: 2¥10px;
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.searchBar {
+    display: flex;
+    width: 100%;
+    /* set as px means it wont be a responsive design (will not work on mobile) */
+    max-width: 600px;
+    /* limits how big it can get on larger devices */
+    margin: 0 auto;
+    /* auto: self-centres the margins around everything */
+    /* margin order: 1st number/word is horizonal second is verticle, if there's only 1 type then it will only effect 1 thing */
+    gap: 14px;
+    border: 1px solid #636363;
+    padding: 12px 20px;
+    /* padding between border and inside items */
+    border-radius: 30px;
+    /* made the border round */
+    align-items: center;
+}
+
+.searchBar:hover {
+    border-color: transparent;
+    background: #303134;
+}
+
+.iconButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.iconButton {
+    background: transparent;
+    border: none;
+    color: #e8eaed;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+input {
+    /* input: has many auto created elements need to change them first */
+    background: transparent;
+    outline: none;
+    border: unset;
+    color: #e8eaed;
+    flex: 1;
+    /* flex: is as greedy as possible and takes up all the space it can get max what the searchBar restrictions allow */
+}
+
+.searchButtonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.searchButtonsContainer button {
+    padding: 10px 14px;
+    border-radius: 4px;
+    background: #303134;
+    border: 1px solid transparent;
+    color: #e8eaed;
+    cursor: pointer;
+    /* changes from a mouse button to the finger click */
+}
+.searchButtonsContainer button:hover {
+    border: 1px solid #303134;
+}
+
+.languageSelection {
+    font-size: 0.8em;
+}
+.languageSelection span {
+    color: #8ab4f8;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    /* how they are vertically arranged */
+    color: #e8eaed;
+}
+
+footer>section {
+    /* footer > section: only selects direct children sections */
+    padding: 15px;
+    background: #171717;
+}
+
+footer>section:last-child {
+    /* last-child: only selects the last listed child */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   border-top: 0.5px solid #515151;
+}
+
+.footerLink {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    font-size: 17px;
+}
+
+.footerLink a {
+    cursor: pointer;
+    color: #e8eaed;
+}
+
+@media (min-width: 540px) {
+    /* always last on the page */
+    footer>section:last-child {
+        flex-direction: row;}
+}
