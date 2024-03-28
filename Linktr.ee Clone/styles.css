@@ -51,7 +51,7 @@ main,
     flex-direction: column;
 }
 
-header img {
+header img { /* profile image */
     max-width: 140px;
     width: 100%;
     margin: 0 auto;
@@ -76,7 +76,7 @@ header p { /* header text bold  */
     font-weight: 700;
 }
 
-main {/* separate links */
+main { /* separate links */
     gap: 14px;
 }
 
@@ -91,10 +91,50 @@ main {/* separate links */
     width: 420px;
     max-width: 100%;
     margin: 0 auto; /* self-centers horizontally */
-    transition-duration: 200ms;
+    transition-duration: 200ms; /* for hover effect */
     cursor: pointer; /* when hovered over you will get a click cursor */
+    color: white;
+    text-decoration: none; /* removed the underline */
 }
 
 .link:hover {
     border-color: skyblue;
+}
+
+.linkBackground {
+    position: absolute; /* take it out of the natural flow of the document
+    Done in respect to the parent. Can only be done when parent position is relative */
+    inset: 0; /* so it spreads itself out to all corners of the parent container */
+    background: #020617;
+    opacity: 0.6;
+    z-index: -1; /* make it sit behind the text */
+}
+
+.link p {
+    font-size: 0.8em;
+}
+
+@media (min-width: 640px) { /* making sure the application can work on mobile and computer */
+    body {
+        gap: 64px;
+        padding: 80px 14px;
+    }
+    header, main {
+        gap: 24px;
+    }
+    header img {
+        max-width: 200px;
+        padding-bottom: 24px;
+    }
+    header h1 {
+        font-size: 1em;
+        font-weight: 400;
+    }
+    header p {
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+    .link p {
+        font-size: 1.1em;
+    }
 }
