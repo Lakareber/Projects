@@ -1,6 +1,5 @@
 * {
     font-family: 'Open Sans', sans-serif;
-        /* type in font name or copy name from html file inside '' and give a backup of another font like sans-serif */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,8 +12,8 @@ h3,
     font-family: 'Poppins', sans-serif;
 }
 
-body {/* container for all the visual content on our page */
-    color: white;
+body {
+    color: black;
     position: relative;
     justify-content: center;
     gap: 42px;
@@ -27,15 +26,15 @@ body {/* container for all the visual content on our page */
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;  /* vw: view width */
+    width: 100vw;
     height: 100vh;
-    z-index: -2; /* layers the content in an out of the page on the z-axis */
+    z-index: -2;
 }
 
 .backgroundImg img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* remove any white space in background */
+    object-fit: cover;
 }
 
 header {
@@ -51,36 +50,37 @@ main,
     flex-direction: column;
 }
 
-header img { /* profile image */
+header img {
     max-width: 140px;
     width: 100%;
     margin: 0 auto;
-    border-radius: 100%; /* make it a perfect circle */
-    padding-bottom: 8px; /* push it apart a little bit */
+    border-radius: 100%;
+    padding-bottom: 8px;
 }
 
-header mark { /* the header name box */
+header mark {
     border-radius: 4px;
-    padding: 2px 4px;
-    background: white;
-    color: #0f172a;
+    padding: 2px 6px;
+    background: #064629;
+    color: white;
 }
 
-header h1 { /* header text (small title) */
-    font-size: 0.8em;
-    font-weight: 400;
+header h1 {
+    font-size: 1em;
+    font-weight: 450;
 }
 
-header p { /* header text bold  */
-    font-size: 0.9em;
+header p {
+    font-size: 1.2em;
     font-weight: 700;
 }
 
-main { /* separate links */
+main {
     gap: 14px;
 }
 
 .link {
+    font-family: 'Open Sans', sans-serif;
     position: relative;
     display: flex;
     align-items: center;
@@ -90,11 +90,11 @@ main { /* separate links */
     border-radius: 8px;
     width: 420px;
     max-width: 100%;
-    margin: 0 auto; /* self-centers horizontally */
-    transition-duration: 200ms; /* for hover effect */
-    cursor: pointer; /* when hovered over you will get a click cursor */
+    margin: 0 auto;
+    transition-duration: 200ms;
+    cursor: pointer;
     color: white;
-    text-decoration: none; /* removed the underline */
+    text-decoration: none;
 }
 
 .link:hover {
@@ -102,19 +102,23 @@ main { /* separate links */
 }
 
 .linkBackground {
-    position: absolute; /* take it out of the natural flow of the document
-    Done in respect to the parent. Can only be done when parent position is relative */
-    inset: 0; /* so it spreads itself out to all corners of the parent container */
-    background: #020617;
-    opacity: 0.6;
-    z-index: -1; /* make it sit behind the text */
+    position: absolute; 
+    inset: 0;
+    background: #084a1f;
+    opacity: 0.7;
+    border-radius: 6px;
+    z-index: -1;
 }
 
 .link p {
     font-size: 0.8em;
 }
 
-@media (min-width: 640px) { /* making sure the application can work on mobile and computer */
+.fa-brands {
+    font-size: 26px;
+}
+
+@media (min-width: 640px) {
     body {
         gap: 64px;
         padding: 80px 14px;
@@ -124,7 +128,7 @@ main { /* separate links */
     }
     header img {
         max-width: 200px;
-        padding-bottom: 24px;
+        padding-bottom: 20px;
     }
     header h1 {
         font-size: 1em;
